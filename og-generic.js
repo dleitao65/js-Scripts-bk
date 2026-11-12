@@ -21,7 +21,10 @@ class generic {
         this.planetid;
         this.planetcoords;
         this.alianceid;
-
+        this.languageUi;
+        
+        this.minasName = ["Metal", "Crystal", "Deuterium"];
+        
         if ( window.location.href.indexOf(this.wPage.WIN_SEL_UNI) < 0 ) {
             try {
                 this.playerid = document.head.querySelector("[name~=ogame-player-id][content]").content;
@@ -30,6 +33,7 @@ class generic {
                 this.planetcoords = document.head.querySelector("[name~=ogame-planet-coordinates][content]").content;
                 this.alianceid = document.head.querySelector("[name~=ogame-alliance-id][content]").content;
                 this.aliancename = document.head.querySelector("[name~=ogame-alliance-name][content]").content;
+                this.languageUi = document.head.querySelector("[name~=ogame-ui-language][content]").content;
             } catch(ex) {}
         }
 
